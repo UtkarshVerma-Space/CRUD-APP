@@ -1,0 +1,10 @@
+
+    const html = `
+     
+ 
+    ${allUsers.map((user)=> `<h1>${user.firstName}</h1>`).join("")}
+    
+    
+    `
+
+    res.send(html)

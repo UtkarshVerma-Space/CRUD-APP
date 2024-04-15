@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../index.css" />
+    <link rel="stylesheet" href="../nav.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- Nav Bar Common -->
+      <div id="nav">
+        <a href="/allUsers">
+          <div id="back">
+            <i class="ri-arrow-left-line"></i>
+            / View All Users
+          </div>
+        </a>
+        <a href="/delete">
+          <div id="download">
+            <i class="ri-file-download-fill"></i>
+            / Delete User
+          </div>
+        </a>
+      </div>
+
+      <!-- Navbar -->
+
+      <div class="conatiner">
+        <center>
+          <h1 id="crnw"></h1>
+        </center>
+
+        <script>
+            function typeWriter() {
+              var i = 0;
+              var txt = "/ CREATE NEW USER"; /* The text */
+              var speed = 50; /* The speed/duration of the effect in milliseconds */
+          
+              function type() {
+                if (i < txt.length) {
+                  document.getElementById("crnw").innerHTML += txt.charAt(i);
+                  i++;
+                  setTimeout(type, speed);
+                }
+              }
+          
+              type();
+            }
+            typeWriter();
+          </script>
+          
+        <form class="form" action="/" method="post">
+          <input
+            class="input"
+            type="text"
+            name="first_name"
+            id=""
+            placeholder="First Name"
+            required
+          />
+          <input
+            class="input"
+            type="text"
+            name="last_name"
+            id=""
+            placeholder="Last Name"
+            required
+          />
+          <input
+            class="input"
+            type="email"
+            name="email"
+            id=""
+            placeholder="Email"
+            required
+          />
+          <input class="subButton" type="submit" />
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

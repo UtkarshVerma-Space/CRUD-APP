@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../delete.css" />
+    <link rel="stylesheet" href="../nav.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- Nav Bar Common -->
+      <div id="nav">
+        <a href="/">
+          <div id="back">
+            <i class="ri-arrow-left-line"></i>
+            / Create New User
+          </div>
+        </a>
+        <a href="/allUsers">
+          <div id="download">
+            <i class="ri-file-download-fill"></i>
+            / View All Users
+          </div>
+        </a>
+      </div>
+
+      <!-- Navbar -->
+
+      <div class="conatiner">
+        <center>
+          <h1 id="crnw"></h1>
+        </center>
+
+        <script>
+            function typeWriter() {
+              var i = 0;
+              var txt = "/ DELETE THE USER"; /* The text */
+              var speed = 50; /* The speed/duration of the effect in milliseconds */
+          
+              function type() {
+                if (i < txt.length) {
+                  document.getElementById("crnw").innerHTML += txt.charAt(i);
+                  i++;
+                  setTimeout(type, speed);
+                }
+              }
+          
+              type();
+            }
+            typeWriter();
+          </script>
+          
+        <form class="form" action="/delete" method="post">
+          <input
+            class="input"
+            type="text"
+            name="id"
+            id=""
+            placeholder="ENTER USER ID TO DELETE THE USER"
+            required
+          />
+       
+          
+          <input class="subButton" type="submit" value="DELETE" />
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

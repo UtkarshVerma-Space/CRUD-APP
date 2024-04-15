@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../created.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="conatiner">
+            <center>
+                <h1 id="crnw"> </h1>
+                <div class="data" style="text-align: left;">
+                    <div class="-id">-id:</div><br>
+                    <div class="first_name">Fisrt Name :<%=first_name%></div><br>
+                    <div class="last_name">Last Name : <%=last_name%></div><br>
+                    <div class="email">Email : <%=email%> </div>
+                </div>
+                <script>
+                    function typeWriter() {
+                      var i = 0;
+                      var txt = "/ NEW USER CREATED SUCCESSFULLY"; /* The text */
+                      var speed = 50; /* The speed/duration of the effect in milliseconds */
+                  
+                      function type() {
+                        if (i < txt.length) {
+                          document.getElementById("crnw").innerHTML += txt.charAt(i);
+                          i++;
+                          setTimeout(type, speed);
+                        }
+                      }
+                  
+                      type();
+                    }
+                    typeWriter();
+                  </script>
+                  
+                <a href="/">
+                    <button class="back">GO BACK</button>
+                </a>
+            </center>
+           
+        </div>
+    </div>
+</body>
+</html>
